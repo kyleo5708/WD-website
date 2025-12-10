@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 20px 10px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 10px;
+}
+
+.car-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.car-card {
+    background-color: white;
+    width: 220px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.car-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+.car-card h2 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.car-card p {
+    font-size: 14px;
+    padding: 0 10px 12px 10px;
+    line-height: 1.4;
+}
+
+/* Little moving car section */
+
+.car-animation {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.car-animation h2 {
+    margin-bottom: 5px;
+}
+
+.car-animation p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.road {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: #666;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Car body */
+
+.car-body {
+    position: absolute;
+    bottom: 25px;
+    left: -140px;
+    width: 120px;
+    height: 40px;
+    background-color: red;
+    border-radius: 10px 10px 6px 6px;
+    animation: drive 4s linear infinite;
+}
+
+/* Car window */
+
+.window {
+    position: absolute;
+    top: 4px;
+    left: 30px;
+    width: 50px;
+    height: 20px;
+    background-color: #add8e6;
+    border-radius: 4px;
+}
+
+/* Wheels */
+
+.wheel {
+    position: absolute;
+    bottom: -12px;
+    width: 24px;
+    height: 24px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.wheel-front {
+    right: 10px;
+}
+
+.wheel-back {
+    left: 10px;
+}
+
+/* Animation */
+
+@keyframes drive {
+    0% {
+        left: -140px;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    background-color: #222;
+    color: white;
+    margin-top: 20px;
+}
+
